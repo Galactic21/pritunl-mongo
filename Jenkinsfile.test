@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+    stages {
+        stage('pre') {
+            steps {
+                sh 'echo "pre success!"; exit 0'
+            }
+        }
+        stage('post') {
+            steps {
+                sh 'echo "post success!"; exit 0'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Failed!"; exit 1'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'This will always run'
+        }
+        success {
+            echo 'This will run only if successful'
+              opsgenie(tags: "informational")
+        }
+        failure {
+            echo 'This will run only if failed'
+            opsgenie(tags: "failure, critical", 
+                     teams: "engineering", priority:"P1")
+        }
+        unstable {
+            echo 'This will run only if the run was marked as unstable'
+            opsgenie()
+        }
+        changed {
+            echo 'This will run only if the state of the Pipeline has changed'
+            echo 'For example, if the Pipeline was previously failing but is now successful'
+        }
+    }
+}
