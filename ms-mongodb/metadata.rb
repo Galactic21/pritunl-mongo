@@ -1,0 +1,11 @@
+name 'ms-mongodb'
+maintainer 'joao.freire, marcio.elias'
+maintainer_email 'joao.freire@mailspike-technologies.pt'
+license 'All Rights Reserved'
+description 'Installs/Configures ms-mongodb'
+version '0.1.10'
+chef_version '>= 15.0'
+issues_url 'https://mailspike.atlassian.net/jira/software/c/projects/OPS/issues'
+source_url 'https://bitbucket.org/mailspike/ms-chef/src/master/cookbooks/ms-mongodb'
+
+depends 'sc-mongodb'

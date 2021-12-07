@@ -1,0 +1,48 @@
+from pymongo import MongoClient
+import os
+
+client = MongoClient(host = ["<%= @conf_mongodb_uri %>"], 
+                    serverSelectionTimeoutMS =200000)
+db = client['pritunl']
+cursor = db.settings
+
+op = ["reverse_proxy", "redirect_server", "server_ssl", "server_port"]
+val = ["True", "False", "False", "80"]
+
+def get_value(op, dic):
+    """Get the values of respective operations in dictionary.
+
+    Args:
+        op (list): Operation list.
+        dic (dict): Dictionary with all keys/operations and values associated.
+    Returns:
+        value (str): The specific value of requested operations.
+    """
+    value = dic[op]
+    return value
+
+def validate(op,val):
+    """Validate if operation exist in mongoDB and validate if it's necessary 
+    run the below commands with the specific operation.
+
+    Args:
+        op (list): Operation list.
+        value (str): Get the value of previous function.
+        key_list (dict): Dictionary with all keys/operations and values associated.
+        document: Stores all data from the mongodb searched and filtered. 
+
+    """
+    key_list = {}
+    for document in cursor.find_one({"_id": "app"}):
+        key_list[document]= cursor.distinct(document)[0]
+
+    if op in list(key_list.keys()):
+        value = get_value(op,key_list)
+        if str(value) != val:
+            os.system('sudo pritunl set app.'+ op +' ' + str(val).lower())
+    else:
+        os.system('sudo pritunl set app.'+ op +' ' + str(val).lower())
+
+# Call the function to validate all operations that we need.
+for i in range(len(op)):
+    validate(op[i],val[i])

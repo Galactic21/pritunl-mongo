@@ -1,0 +1,510 @@
+{
+  "revision_id": "77d14e18ffc8a7939def962e9cf42a3e3f0575d2cfb5fe316daf177ff2535870",
+  "name": "ms-mongodb",
+  "run_list": [
+    "recipe[ms-base::default]",
+    "recipe[ms-mongodb::default]",
+    "recipe[ms-prometheus-exporters::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "chef-client": {
+      "version": "12.3.3",
+      "identifier": "827e3c485707c949252329c7535e6d17a166ead8",
+      "dotted_decimal_identifier": "36730544349185993.20588506254889822.119948259551960",
+      "source": "../chef-client",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../chef-client"
+      }
+    },
+    "chef_client_updater": {
+      "version": "3.11.1",
+      "identifier": "85b2bbeee3ad8cca863a84c88a4e0f3be36e7cb1",
+      "dotted_decimal_identifier": "37632692139044236.57005531189512782.16749893156017",
+      "source": "../chef_client_updater",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../chef_client_updater"
+      }
+    },
+    "cron": {
+      "version": "6.4.0",
+      "identifier": "c112ad00b72022a61c427b3deedef49b3a7e043d",
+      "dotted_decimal_identifier": "54345204755800098.46755917995044574.268947538445373",
+      "source": "../cron",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cron"
+      }
+    },
+    "iptables": {
+      "version": "7.1.0",
+      "identifier": "fc0c17e02820f09f81c5635c7c54a6e3e16013b6",
+      "dotted_decimal_identifier": "70944990815592688.44897206072540244.183497668957110",
+      "source": "../iptables",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../iptables"
+      }
+    },
+    "logrotate": {
+      "version": "2.2.3",
+      "identifier": "ab4495244aeb1dab2fdd6fe883d3d53d55ef03cf",
+      "dotted_decimal_identifier": "48207628367227677.48184849129309139.234459411448783",
+      "source": "../logrotate",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../logrotate"
+      }
+    },
+    "ms-base": {
+      "version": "0.0.4",
+      "identifier": "a4d8a495d48ff73406346e5989a18669a787e5ca",
+      "dotted_decimal_identifier": "46400097580519415.14643521048381857.147788340389322",
+      "source": "../ms-base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../ms-base"
+      }
+    },
+    "ms-mongodb": {
+      "version": "0.1.10",
+      "identifier": "0f7e9f69fdf118f932b5331c0cae4fefe6fd3ef4",
+      "dotted_decimal_identifier": "4361347793809688.70143023028898990.87891791134452",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "ms-prometheus-exporters": {
+      "version": "0.0.19",
+      "identifier": "6c4502b4c06c89c5dc9a8f29f026449e8d6c0613",
+      "dotted_decimal_identifier": "30475175409511561.55693126796963878.75447768188435",
+      "source": "../ms-prometheus-exporters",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../ms-prometheus-exporters"
+      }
+    },
+    "ms-users": {
+      "version": "0.0.2",
+      "identifier": "e272b7caebd4fa23159dda14dd6cd93ef53fb309",
+      "dotted_decimal_identifier": "63739478445643002.9875391897722220.238864425792265",
+      "source": "../ms-users",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../ms-users"
+      }
+    },
+    "openssh": {
+      "version": "2.8.1",
+      "identifier": "9bc876cbdf150a174361c46333a6f74895e50e61",
+      "dotted_decimal_identifier": "43849033942242570.6548011650069414.271891124522593",
+      "source": "../openssh",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../openssh"
+      }
+    },
+    "prometheus_exporters": {
+      "version": "0.17.2",
+      "identifier": "a6f0c28a41828dceafaee74422940a018a8b8b85",
+      "dotted_decimal_identifier": "46989564467839629.58177010941567636.11001735646085",
+      "cache_key": "prometheus_exporters-0.17.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/prometheus_exporters/versions/0.17.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/prometheus_exporters/versions/0.17.2/download",
+        "version": "0.17.2"
+      }
+    },
+    "sc-mongodb": {
+      "version": "4.1.0",
+      "identifier": "9e26451a3e14c235b84a541bf596602be1c13970",
+      "dotted_decimal_identifier": "44515124555158722.15120803143873942.105741587396976",
+      "source": "../sc-mongodb",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../sc-mongodb"
+      }
+    },
+    "slack_handler": {
+      "version": "1.0.0",
+      "identifier": "69d195126ad8de9b3a29bac9c08bb939238d87e2",
+      "dotted_decimal_identifier": "29785310743943390.43692572292006027.203655060752354",
+      "source": "../slack_handler",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../slack_handler"
+      }
+    },
+    "sudo": {
+      "version": "5.4.6",
+      "identifier": "543e5812aa18550b0a4c53d05d6b9f6dc56358bf",
+      "dotted_decimal_identifier": "23712446034876501.3107547683773803.175293811873983",
+      "source": "../sudo",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../sudo"
+      }
+    },
+    "users": {
+      "version": "5.6.0",
+      "identifier": "85048e0e1f5fc8e72e295dc4dd2742fa0684095d",
+      "dotted_decimal_identifier": "37441180071321544.65071474821881127.73641618573661",
+      "source": "../users",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../users"
+      }
+    },
+    "yum": {
+      "version": "6.0.0",
+      "identifier": "e194b2bcac7b666bcb6ebd9e1f5719c5cd2c8c2b",
+      "dotted_decimal_identifier": "63495365150407526.30341498996137815.28337341500459",
+      "source": "../yum",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@bitbucket.org:mailspike/ms-chef.git",
+        "revision": "556aa86f87cb0a10bcc5b55f40cbb1eb305c47f0",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../yum"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef-client",
+        ">= 0.0.0"
+      ],
+      [
+        "chef_client_updater",
+        ">= 0.0.0"
+      ],
+      [
+        "cron",
+        ">= 0.0.0"
+      ],
+      [
+        "iptables",
+        ">= 0.0.0"
+      ],
+      [
+        "logrotate",
+        ">= 0.0.0"
+      ],
+      [
+        "ms-base",
+        ">= 0.0.0"
+      ],
+      [
+        "ms-mongodb",
+        ">= 0.0.0"
+      ],
+      [
+        "ms-prometheus-exporters",
+        ">= 0.0.0"
+      ],
+      [
+        "ms-users",
+        ">= 0.0.0"
+      ],
+      [
+        "openssh",
+        ">= 0.0.0"
+      ],
+      [
+        "prometheus_exporters",
+        "= 0.17.2"
+      ],
+      [
+        "sc-mongodb",
+        ">= 0.0.0"
+      ],
+      [
+        "slack_handler",
+        ">= 0.0.0"
+      ],
+      [
+        "sudo",
+        ">= 0.0.0"
+      ],
+      [
+        "users",
+        ">= 0.0.0"
+      ],
+      [
+        "yum",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "chef-client (12.3.3)": [
+        [
+          "cron",
+          ">= 4.2.0"
+        ],
+        [
+          "logrotate",
+          ">= 1.9.0"
+        ]
+      ],
+      "chef_client_updater (3.11.1)": [
+
+      ],
+      "cron (6.4.0)": [
+
+      ],
+      "iptables (7.1.0)": [
+
+      ],
+      "logrotate (2.2.3)": [
+
+      ],
+      "ms-base (0.0.4)": [
+        [
+          "yum",
+          ">= 0.0.0"
+        ],
+        [
+          "chef-client",
+          ">= 0.0.0"
+        ],
+        [
+          "chef_client_updater",
+          ">= 0.0.0"
+        ],
+        [
+          "openssh",
+          ">= 0.0.0"
+        ],
+        [
+          "ms-users",
+          ">= 0.0.0"
+        ],
+        [
+          "slack_handler",
+          ">= 0.0.0"
+        ]
+      ],
+      "ms-mongodb (0.1.10)": [
+        [
+          "sc-mongodb",
+          ">= 0.0.0"
+        ]
+      ],
+      "ms-prometheus-exporters (0.0.19)": [
+        [
+          "prometheus_exporters",
+          ">= 0.0.0"
+        ]
+      ],
+      "ms-users (0.0.2)": [
+        [
+          "users",
+          ">= 0.0.0"
+        ],
+        [
+          "sudo",
+          ">= 0.0.0"
+        ]
+      ],
+      "openssh (2.8.1)": [
+        [
+          "iptables",
+          ">= 1.0.0"
+        ]
+      ],
+      "prometheus_exporters (0.17.2)": [
+
+      ],
+      "sc-mongodb (4.1.0)": [
+
+      ],
+      "slack_handler (1.0.0)": [
+
+      ],
+      "sudo (5.4.6)": [
+
+      ],
+      "users (5.6.0)": [
+
+      ],
+      "yum (6.0.0)": [
+
+      ]
+    }
+  }
+}

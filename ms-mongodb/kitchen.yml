@@ -1,0 +1,46 @@
+---
+driver:
+  name: vagrant
+## The forwarded_port port feature lets you connect to ports on the VM guest via
+## localhost on the host.
+## see also: https://www.vagrantup.com/docs/networking/forwarded_ports.html
+  network:
+    - ["forwarded_port", {guest: 27017, host: 27017}]
+    - ["public_network", {bridge: "en0: Wi-Fi"}]
+provisioner:
+  name: chef_zero
+  ## product_name and product_version specifies a specific Chef product and version to install.
+  ## see the Chef documentation for more details: https://docs.chef.io/workstation/config_yml_kitchen/
+  #  product_name: chef
+  #  product_version: 16
+verifier:
+  name: inspec
+platforms:
+  - name: ubuntu-20.04
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+        chef_client_updater: {version: '16.13.16'}
+        base:
+          test_kitchen: true
+  - name: pritunl
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+        chef_client_updater: {version: '16.13.16'}
+        base:
+          test_kitchen: true
+        mongo_db:
+          admin:
+            pass: admin
+            new_pass: admin
+          dbOwner:
+            user: joao.freire
+            pass: cat123
+            db: pritunl
+          profile: pritunl
+
